@@ -1,0 +1,25 @@
+{
+  "name": "terraform-github-repository-module",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "author": "hanayamabuyu@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@semantic-release/gitlab-config": "^10.0.1",
+    "semantic-release": "^19.0.5",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mBlomsterberg/terraform-github-repository-module.git"
+  }
+}
