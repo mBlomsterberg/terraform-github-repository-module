@@ -1,7 +1,7 @@
 <br />
 <div id="readme-top" align="center">
   <a href="https://github.com/mBlomsterberg">
-    <img src="small_logo.svg" alt="Logo" width="80" height="80">
+    <img src="small_logo.svg" alt="Logo" width="200" height="80">
   </a>
 
   <h3 align="center">terraform-github-repository-module</h3>
