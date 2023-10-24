@@ -3,7 +3,7 @@
   <a href="https://github.com/mBlomsterberg/">
     <picture>
       <source srcset="logo_inv.png" media="(prefers-color-scheme: dark)">
-      <img src="logo.png" alt="Logo" width="200" height="200">
+      <img src="logo.png" alt="logo" width="200" height="200">
     </picture>
   </a>
 
