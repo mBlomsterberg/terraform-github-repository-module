@@ -48,7 +48,7 @@ resource "github_repository" "this" {
   ignore_vulnerability_alerts_during_read = var.ignore_vulnerability_alerts_during_read
 
   dynamic "template" {
-    for_each =  var.template == null ? [local.default_template] : [var.template]
+    for_each =  var.template == null ? [] : [var.template]
     content {
       owner = template.value.owner
       repository = template.value.repository
