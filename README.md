@@ -13,7 +13,7 @@
     Terraform Module for GitHub Repository creation.
     <br />
     <br />
-    <a href="https://github.com/mBlomsterberg/terraform-github-repository-module/blob/main/documentation/workflows.md">Module Examples</a>
+    <a href="https://github.com/mBlomsterberg/terraform-github-repository-module/blob/main/examples/">Module Examples</a>
     ·
     <a href="https://github.com/mBlomsterberg/terraform-github-repository-module/blob/main/documentation/version.md">Versioning</a>
   </p>
