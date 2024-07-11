@@ -1,19 +1,34 @@
 locals {
   template_files = fileset(path.module, "resources/template_files/*.tftpl")
 
+  variables = {
+    repository  = github_repository.this.name, 
+    description = github_repository.this.description,
+    team        = "empty",
+    owner       = var.owner,
+    codeowners  = join(", ", var.codeowners),
+    http_url    = github_repository.this.html_url,
+  }
+
   templates = [
     {
-      file_name     = "package.json"
-      file_location = "/resources/template_files/package_json.tftpl"
-      variables     = {
-          repository = github_repository.this.name, 
-          http_url   = github_repository.this.html_url,
-      }
-      commit_message      = "docs: initial package.json update"
+      file_name           = "README.md"
+      file_location       = "/resources/template_files/readme.tftpl"
+      variables           = local.variables
+      commit_message      = "docs: initial readme.md update"
       commit_author       = "Terraform"
-      commit_email        = "example@mail.com"
+      commit_email        = "example@example.com"
       overwrite_on_create = true
     },
+    {
+      file_name           = "CODEOWNERS"
+      file_location       = "/resources/template_files/codeowners.tftpl"
+      variables           = local.variables
+      commit_message      = "docs: initial CODEOWNERS update"
+      commit_author       = "Terraform"
+      commit_email        = "example@example.com"
+      overwrite_on_create = true
+    }
   ]
 }
 

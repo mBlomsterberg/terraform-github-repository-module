@@ -11,6 +11,12 @@ variable "owner" {
     default = null
 }
 
+variable "codeowners" {
+    type = list(string)
+    description = "(Optional) This is the target team or individual user account that manages the code in the repository."
+    default = null
+} 
+
 variable "collaborator_users"{
         type = list(object({
         permission = optional(string, "read")

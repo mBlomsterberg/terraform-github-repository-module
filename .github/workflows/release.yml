@@ -1,27 +1,21 @@
-name: Semantic Release
+name: Reusable Workflow Release
 
 on:
-    push: 
+  push:
+    branches: [main]
+
+  repository_dispatch:
+    types: [semantic-release]
+
+  workflow_dispatch:
+
+permissions: read-all
 
 jobs:
-  release:
-    name: Create release
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-        with:
-          token: ${{ secrets.PAT }}
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        working-directory: .
-        run: npm install
-
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
-        run: npx semantic-release
+  pipeline:
+    permissions:
+      actions: write
+      contents: write
+    uses: mBlomsterberg/hanayama-workflows/.github/workflows/reusable_release.yml@main
+    secrets:
+      github-token: ${{secrets.PAT}}
