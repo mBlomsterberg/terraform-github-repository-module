@@ -2,10 +2,10 @@
 
 locals {
 
-    sa_user = [{
+    sa_user = "${data.github_user.current.login}" != var.owner ? [{
         permission = "admin"
         username   = "${data.github_user.current.login}"
-    }]
+    }] : []
 
     users = concat(local.sa_user, var.collaborator_users)
 }
