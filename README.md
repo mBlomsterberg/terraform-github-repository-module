@@ -46,7 +46,7 @@ Should your repository be open to an external or onboarding new members you can 
 
 # Code of Conduct
 
-This project has adopted the XXXXXX Code of Conduct. For more information see the Code of Conduct FAQ or contact [mBlomsterberg]() with any additional questions or comments.
+This project has adopted the XXXXXX Code of Conduct. For more information see the Code of Conduct FAQ or contact [mBlomsterberg](https://github.com/mBlomsterberg) with any additional questions or comments.
 
 # License
 
